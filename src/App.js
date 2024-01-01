@@ -5,12 +5,18 @@ import Handlingstate from "./FunctionalComp/Handlingstate";
 import Button from "./FunctionalComp/Button";
 import Counter from "./FunctionalComp/Lifecycle/Counter";
 import Conditional from "./ConditionalRendering/Conditional";
+import Toggle from "./Hooks/Toggle";
 const sayHello = () => setTimeout(() => console.log("Hello"), 1000);
 
 function App() {
   const namee = "Manvi";
   const [greeting, setgreeting] = useState("Hello functional component");
   const handleChange = (event) => setgreeting(event.target.value);
+  const [toggle, setToggle] = useState(true);
+
+  const handleToggle = () => {
+    setToggle(!toggle);
+  };
   const users = [
     {
       id: "1",
@@ -40,6 +46,9 @@ function App() {
       {/* Conditional Rendering*/}
       <Conditional list={users} />
 
+      {/* Hooks , we are also passsing a function defined in parent comp as a prop to child component*/}
+
+      <Toggle toggle={toggle} onToggle={handleToggle} />
     </div>
   );
 }

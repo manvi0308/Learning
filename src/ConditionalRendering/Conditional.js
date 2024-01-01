@@ -22,7 +22,7 @@ function Conditional({ list }) {
         {list.map((item) => (
           <Item key={item.id} item={item} />
         ))}
-      <loadingIndicator isLoading={true}/>
+        <loadingIndicator isLoading={true} />
       </ul>
     </>
   );
