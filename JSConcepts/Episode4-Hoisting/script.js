@@ -7,3 +7,4 @@ function getName() {
     console.log('Function....');
 }
 
+console.log('Heyy');
