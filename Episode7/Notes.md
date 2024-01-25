@@ -1,0 +1,3 @@
+- Lexical Environment = local memory + lexical env of its parent. Hence, Lexical Environement is the local memory along with the lexical environment of its parent.
+- Whenever an Execution Context is created, a Lexical environment(LE) is also created and is referenced in the local Execution Context(in memory space). The process of going one by one to parent and checking for values is called scope chain or Lexcial environment chain.
+-  An inner function can access variables which are in outer functions even if inner function is nested deep. In any other case, a function can't access variables not in its scope.
