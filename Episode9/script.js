@@ -63,6 +63,6 @@ console.log(g); // value of g used is globally scoped here
 let h = 20;
 
 {
-    var h = 20;
+    var h = 20; // cannot redeclare block scoped variable h
     console.log(h);
 }
